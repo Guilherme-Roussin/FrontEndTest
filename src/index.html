@@ -1,17 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrontEndTest</title>
-
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-    Hello!
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="assets/logo-sky.svg" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <i class="material-icons">menu</i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-none d-md-flex">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="material-icons">accessibility_new</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="material-icons">tonality</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link sky-icons-text">
+                            <strong>A-</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link sky-icons-text">
+                            <strong>A+</strong>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link sky-text">
+                            <i class="material-icons">change_history</i>
+                            <strong>Play</strong>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link sky-text">
+                            <i class="material-icons">person_outline</i><strong>Entrar</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link sky-text">
+                            <i class="material-icons">search</i>
+                            <strong class="d-flex d-md-none">Pesquisar</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+        <li class="nav-item col-4">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Filmes</a>
+        </li>
+        <li class="nav-item col-4">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">Séries</a>
+        </li>
+        <li class="nav-item col-4">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                aria-selected="false">Canais</a>
+        </li>
+    </ul>
+
+    <!-- Carousel Highlights -->
+    <div class="carousel-highlights slickcenter">
+        <div class="items">
+            <img src="https://d3bntrzcei186j.cloudfront.net/fit-in/1920x1080/images/sky-content-hub-prd/5afc25a391e93f47248f1064/5a563880332c65000165b739_2_1920x1080.jpeg"
+                alt="Second slide">
+        </div>
+    </div>
+
+    <!-- Containers Tabs -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Tab Filmes -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <!-- Carousel Movies -->
+            <h6>Categoria</h6>
+            <div class="carousel-movies slickresponsive">
+                <div class="items">
+                    <img src="https://d3bntrzcei186j.cloudfront.net/fit-in/1000x1500/images/sky-content-hub-prd/5afffea9c7c80900d54022c4/5a563880332c65000165b739_3_1000x1500.jpeg"" alt="">
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Tab Series -->
+        <div class=" tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        </div>
+
+        <!-- Tab Canais -->
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-collapse bg-secondary">
+        <div class="row">
+            <div class="container px-5 px-sm-0">
+                <a href="#">
+                    <img src="assets/sky-light-default.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="container text-center text-md-left">
+            <div class="row py-3 grid-links">
+                <div class="col-md-6 p-0">
+                    <ul>
+                        <li class="text-left">
+                            <a href="#">
+                                <img src="assets/minha-sky.png" alt="">
+                            </a>
+                            <strong>Baixe no seu celular o app Minha Sky e divirta-se.</strong>
+                        </li>
+                        <li class="d-none d-md-flex">
+                            <a href="#">
+                                <img src="assets/button-apple-store-light-default.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="d-none d-md-flex">
+                            <a href="#">
+                                <img src="assets/button-google-play-light-default.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Grid Links -->
+                <div class="col-md-3 p-0 d-none d-md-block">
+                    <h6>Sobre</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Nossa História</a>
+                        </li>
+                        <li>
+                            <a href="#!">Imprensa</a>
+                        </li>
+                        <li>
+                            <a href="#!">Prêmios conquistados</a>
+                        </li>
+                        <li>
+                            <a href="#!">Credenciamento</a>
+                        </li>
+                        <li>
+                            <a href="#!">Trabalhe com a gente</a>
+                        </li>
+                        <li>
+                            <a href="#!">Promoção</a>
+                        </li>
+                    </ul>
+                    <h6>Ajuda</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Central de ajuda</a>
+                        </li>
+                        <li>
+                            <a href="#!">Manuais</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 p-0 d-none d-md-block">
+                    <h6>Nossas Responsabilidades</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Conselhos aos usuários</a>
+                        </li>
+                        <li>
+                            <a href="#!">Pesquisa Anatel</a>
+                        </li>
+                        <li>
+                            <a href="#!">Relatórios de Transparência</a>
+                        </li>
+                        <li>
+                            <a href="#!">Responsabilidade Social</a>
+                        </li>
+                        <li>
+                            <a href="#!">Acessibilidade</a>
+                        </li>
+                    </ul>
+                    <h6>Sky Empresas</h6>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Collapsables Link -->
+        <div class="d-block d-md-none">
+            <div class="row accordion-row" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                aria-expanded="false" aria-controls="collapseOne">
+                <div id="accordion" role="tablist" aria-multiselectable="true" class="widget text-left py-2 px-5">
+                    <div role="tab" id="headingOne">
+                        <h6 class="border-0 text-bold">
+                            Sobre
+                        </h6>
+                    </div>
+                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-block">
+                            <ul class="widget-list list-unstyled p-0">
+                                <li>
+                                    <a href="#!">Nossa História</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Imprensa</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Prêmios conquistados</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Credenciamento</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Trabalhe com a gente</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Promoção</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row accordion-row" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                <div id="accordion" role="tablist" aria-multiselectable="true" class="widget text-left py-2 px-5">
+                    <div role="tab" id="headingOne">
+                        <h6 class="border-0 text-bold">
+                            Ajuda
+                        </h6>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-block">
+                            <ul class="widget-list list-unstyled p-0">
+                                <li>
+                                    <a href="#!">Central de ajuda</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Manuais</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row accordion-row" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                <div id="accordion" role="tablist" aria-multiselectable="true" class="widget text-left py-2 px-5">
+                    <div role="tab" id="headingOne">
+                        <h6 class="border-0 text-bold">
+                            Nossas Responsabilidades
+                        </h6>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-block">
+                            <ul class="widget-list list-unstyled p-0">
+                                <li>
+                                    <a href="#!">Conselhos aos usuários</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Pesquisa Anatel</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Relatórios de Transparência</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Responsabilidade Social</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Acessibilidade</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row accordion-row px-5 py-2 ">
+                <h6 class="border-0 text-bold">
+                    Sky Empresas
+                </h6>
+            </div>
+        </div>
+
+        <!-- Footer-Copyright -->
+        
+    </footer>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.js"></script>
+    <script src="/js/js.js"></script>
 </body>
+
 </html>
