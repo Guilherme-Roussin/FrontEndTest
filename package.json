@@ -1,0 +1,30 @@
+{
+  "name": "frontendtest",
+  "version": "1.0.0",
+  "description": "FrontEndTest #\u0000 \u0000F\u0000r\u0000o\u0000n\u0000t\u0000E\u0000n\u0000d\u0000T\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-minify-css": "^1.2.4",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1",
+    "bootstrap": "^4.4.1",
+    "npm": "^6.13.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilherme-Roussin/FrontEndTest.git"
+  },
+  "author": "Guilherme Roussin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guilherme-Roussin/FrontEndTest/issues"
+  },
+  "homepage": "https://github.com/Guilherme-Roussin/FrontEndTest#readme"
+}
