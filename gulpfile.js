@@ -5,14 +5,24 @@ let sass = require('gulp-sass')
 function _sass(cb) {
     return src(
         [
-            'node_modules/bootstrap/scss/bootstrap.scss',
-            'node_modules/slick-carousel/slick/slick.scss',
             'src/scss/*.scss'
         ]
     )
-        .pipe(sass())
-        .pipe(dest('src/css'))
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(dest('dist/css'))
         .pipe(browserSync.stream())
+
+    cb()
+}
+
+function copy(cb) {
+    return src(
+        [
+            'src/index.html',
+            'src/assets'
+        ]
+    )
+        .pipe(dest('dist'))
 
     cb()
 }
@@ -22,10 +32,11 @@ function js(cb) {
         [
             'node_modules/slick-carousel/slick/slick.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/jquery/dist/jquery.min.js'
+            'node_modules/jquery/dist/jquery.min.js',
+            'src/js/*.js'
         ]
     )
-        .pipe(dest('src/js'))
+        .pipe(dest('dist/js'))
         .pipe(browserSync.stream())
 
     cb()
@@ -33,12 +44,11 @@ function js(cb) {
 
 function serve(cb) {
     browserSync.init({
-        server: './src'
+        server: './dist'
     })
 
     watch(
         [
-            'node_modules/bootstrap/scss/bootstrap.scss',
             'src/scss/*.scss'
         ]
         , series(_sass)
@@ -46,9 +56,16 @@ function serve(cb) {
 
     watch(
         [
-            'src/js/js.js'
+            'src/js/*.js'
         ]
         , series(js)
+    )
+
+    watch(
+        [
+            'src/index.html'
+        ]
+        , series(copy)
     )
 
     watch('src/*.html').on('change', browserSync.reload)
@@ -56,4 +73,4 @@ function serve(cb) {
     cb()
 }
 
-exports.default = series(js, _sass, serve)
+exports.default = series(js, _sass, copy, serve)
