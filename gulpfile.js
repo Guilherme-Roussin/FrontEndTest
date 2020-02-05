@@ -5,7 +5,7 @@ let sass = require('gulp-sass')
 function _sass(cb) {
     return src(
         [
-            'src/scss/*.scss'
+            'src/scss/*.scss' 
         ]
     )
         .pipe(sass({ outputStyle: 'compressed' }))
@@ -18,11 +18,21 @@ function _sass(cb) {
 function copy(cb) {
     return src(
         [
-            'src/index.html',
-            'src/assets'
+            'src/index.html'
         ]
     )
         .pipe(dest('dist'))
+
+    cb()
+}
+
+function assets(cb) {
+    return src(
+        [
+            'src/assets/*'
+        ]
+    )
+        .pipe(dest('dist/assets'))
 
     cb()
 }
@@ -73,4 +83,4 @@ function serve(cb) {
     cb()
 }
 
-exports.default = series(js, _sass, copy, serve)
+exports.default = series(js, _sass, copy, assets, serve)
