@@ -1,11 +1,8 @@
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
+$theme-colors: ("primary": #F35C58,
+    "secondary": #F1F2FA);
 
-$theme-colors: (
-    "primary": #F35C58,
-    "secondary": #F1F2FA
-);
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/slick-carousel/slick/slick.scss";
 
 * {
     color: #646466;
@@ -282,5 +279,3 @@ footer {
         }
     }
 }
-
-@import "node_modules/bootstrap/scss/bootstrap.scss";
